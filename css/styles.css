@@ -1,6 +1,36 @@
-div {
-	width: 1000px;
-	height: 1000px;
+ body {
+	/*width: 1260px;*/
+	margin: 0 auto;
 	background-image: url("../images/bg.jpg");
-	overflow: scroll;
+	font-family: Oswald, arial, sans-serif;
+	
+}
+
+.container-main {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.header {
+	padding-top: 20px;	
+	/*border: 5px solid red;*/
+	background: yellow;
+}
+
+.logo {
+     display: inline-block;
+}
+
+.search {
+	display: inline-block;
+	float: right;
+}
+
+.top-menu {
+	border: 1px solid #e7e7e7;
+	margin-top: 22px;
+}
+.list-menu li {
+     display: inline-block;
+     padding: 10px;
 }
