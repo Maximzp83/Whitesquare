@@ -1,5 +1,4 @@
  body {
-	/*width: 1260px;*/
 	margin: 0 auto;
 	background-image: url("../images/bg.jpg");
 	font-family: Oswald, arial, sans-serif;
@@ -8,11 +7,15 @@
 	
 }
 
-.list-menu a {
-    transition: 1s linear;
-    -webkit-transition: 1s linear;/*Chrome до версии 26.0, Safari, Android и iOS*/
-    -moz-transition: 1s linear;/*Firefox до версии 16.0*/
-    -o-transition: 1s linear;/*Opera до версии 12.10*/
+a {	text-decoration: none; }
+
+.list-menu a,
+.sub-menu a,
+.sub-menu a:before	 {
+    transition: .6s linear;
+    -webkit-transition: .6s linear;/*Chrome до версии 26.0, Safari, Android и iOS*/
+    -moz-transition: .6s linear;/*Firefox до версии 16.0*/
+    -o-transition: .6s linear;/*Opera до версии 12.10*/
 }
 
 .container-main {
@@ -22,8 +25,6 @@
 
 .header {
 	padding-top: 26px;	
-	/*border: 5px solid red;*/
-	/*background: lightblue;*/
 }
 
 .logo {
@@ -39,10 +40,11 @@ form[name="search"] {
 }
 
 .top-menu ul {
+	display: block;
 	margin: 0;
 	padding: 0;
 	border: 1px solid #e7e7e7;
-	margin-top: 22px;
+	margin: 22px 0 30px 0;
 	background: #f3f3f3;
 }
 
@@ -61,16 +63,11 @@ form[name="search"] {
 
 .list-menu a {
 	display: block;
-	/*height: 40px;*/
-	/*justify-content:center;*/
-	/*align-items: center;*/
-	text-decoration: none;
 	line-height: 40px;
 	color: #b7b7b7;
 }
 
 .list-menu a:hover {
-	/*border-bottom: 1px solid #29c5e6;*/
 	cursor: pointer;
  	color: #29c5e6;
 } 
@@ -85,31 +82,77 @@ form[name="search"] {
     content: "";
     width: 0%;
     height: 2px;
-    background-color: #29c5e6;
-    margin-top: 7px;
-    -webkit-transition: width .3s ease-in-out;
+    background-color: #9ed0f2;
+    margin-top: 4px;
+    -webkit-transition: margin .3s ease-out;
 }
 
-a:hover span:after {
+.list-menu a:hover span:after {
+	margin-top: 9px;
 	width: 100%;
 }
-
-
-/*.list-menu a:hover {
-	border-bottom: 1px solid #b7b7b7;
-}*/
-
-/*.list-menu a {
-  padding-bottom: -10px;
-  border-bottom: 1px solid black;
-  transition: all 1.5s linear;
- }  */
-
-/* .list-menu a:hover {
- 	color: #29c5e6;
-	/*border-bottom: 1px solid #29c5e6;
-}*/
-
-
-
 	/*----------------НАВИГАЦИОННОЕ МЕНЮ В HEADER------(конец)-------------*/
+    /*--------------------HEADER END------------------------------*/
+
+    /*--------------------MAIN BEGIN------------------------------*/
+
+.page-title {
+	height: 35px;
+     margin: 30px 0;
+     background-image:  url("../images/h1-bg.png") ;
+}
+
+.page-title h1 {
+	display: inline-block;
+	margin-left: 20px;
+	padding: 0 10px;
+	font: 40px 'Oswald', sans-serif;
+	margin-top: -11px;
+	font-weight: bold;
+	color: #7e7e7e;
+	background-image: url("../images/bg.jpg");
+}
+
+    /*--------------------ASIDE BEGIN------------------------------*/
+
+.aside {
+	display: inline-block;
+}
+
+.sub-menu {
+	display: inline-block;
+	margin: 0;
+	width: 250px;
+	padding: 0;
+}
+
+.sub-menu li {
+	border: 1px solid #e7e7e7;
+	margin-bottom: -1px;
+	list-style: none;
+	background: #f3f3f3;
+}
+
+.sub-menu a {
+	display: block;
+	line-height: 38px;
+	color: #8f8f8f;
+	/*padding-left: 10px;*/
+}
+
+ /*------Marker------*/
+.sub-menu a:before {
+	content: "";
+	display: inline-block;
+	width: 8px; height: 8px;
+	background-color: #8f8f8f;
+	margin: 0 12px 1px 12px;
+}
+
+.sub-menu a:hover:before {
+	background-color: #29c5e6;
+}
+
+.sub-menu a:hover {
+	color: #29c5e6;
+}
