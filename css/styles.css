@@ -4,7 +4,7 @@
 	font-family: Oswald, arial, sans-serif;
 	border-top: 5px solid #7e7e7e;
 	font-size: 14px;
-	
+	box-sizing: border-box;
 }
 
 a {	text-decoration: none; }
@@ -18,8 +18,17 @@ a {	text-decoration: none; }
     -o-transition: .6s linear;/*Opera до версии 12.10*/
 }
 
+.title {
+	background-color: #29c5e6;
+	/*font-weight: bold;*/
+	color: #fff;
+	font-stretch: condensed;
+	font-family: arial, sans-serif;
+
+}
+
 .container-main {
-	width: 962px;
+	max-width: 960px;
 	margin: 0 auto;
 }
 
@@ -41,6 +50,7 @@ form[name="search"] {
 
 .top-menu ul {
 	display: block;
+    max-width: 100%; 
 	margin: 0;
 	padding: 0;
 	border: 1px solid #e7e7e7;
@@ -50,22 +60,25 @@ form[name="search"] {
 
 .list-menu li {
      display: inline-block;
-     width: 12.5%; 
+     min-width: 12.5%;     
      margin-right: -4px;
      font-weight: bold;
 	 text-align: center;
 }
 
-.list-menu li.active a  {
-     background: #29c5e6;
-     color: #fff;
- }
-
 .list-menu a {
 	display: block;
+	padding: 0 10px;
 	line-height: 40px;
 	color: #b7b7b7;
 }
+
+.list-menu li.active a  {
+	/*max-width: 12.5%;
+	padding: 0 18.5%;*/
+     background: #29c5e6;
+     color: #fff;
+ }
 
 .list-menu a:hover {
 	cursor: pointer;
@@ -81,16 +94,25 @@ form[name="search"] {
 	display: block;
     content: "";
     width: 0%;
-    height: 2px;
-    background-color: #9ed0f2;
+    /*height: 0px;*/
+    /*background-color: #9ed0f2;*/
+    border-bottom: 2px solid #9ed0f2;
     margin-top: 4px;
     -webkit-transition: margin .3s ease-out;
+    -moz-transition: margin .3s ease-out;
+    transition: margin .3s ease-out;
 }
 
 .list-menu a:hover span:after {
 	margin-top: 9px;
 	width: 100%;
 }
+
+.list-menu li.active a:hover span:after  {
+     	width: 0%;
+ }
+
+
 	/*----------------НАВИГАЦИОННОЕ МЕНЮ В HEADER------(конец)-------------*/
     /*--------------------HEADER END------------------------------*/
 
@@ -104,10 +126,11 @@ form[name="search"] {
 
 .page-title h1 {
 	display: inline-block;
+	margin: 0;
 	margin-left: 20px;
 	padding: 0 10px;
 	font: 40px 'Oswald', sans-serif;
-	margin-top: -11px;
+	margin-top: -0.5%;
 	font-weight: bold;
 	color: #7e7e7e;
 	background-image: url("../images/bg.jpg");
@@ -117,12 +140,14 @@ form[name="search"] {
 
 .aside {
 	display: inline-block;
+	width: 26%;
+	/*margin-right: 30px;*/
 }
 
+ /*------Aside Menu begin------*/
+
 .sub-menu {
-	display: inline-block;
 	margin: 0;
-	width: 250px;
 	padding: 0;
 }
 
@@ -136,6 +161,7 @@ form[name="search"] {
 .sub-menu a {
 	display: block;
 	line-height: 38px;
+	font-stretch: condensed;
 	color: #8f8f8f;
 	/*padding-left: 10px;*/
 }
@@ -156,3 +182,122 @@ form[name="search"] {
 .sub-menu a:hover {
 	color: #29c5e6;
 }
+ /*------Marker end------*/
+
+ /*------Aside Menu end------*/
+
+.map {
+	margin-top: 30px;
+	border: 1px solid #e7e7e7;
+	background-color: #f3f3f3;
+}
+
+.map-title {
+	padding-left: 10px;
+	line-height: 35px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.map img {
+	display: block;
+	max-height: 180px; width: 91%;
+	/*margin: 5%;*/
+	padding: 4.5%;
+}
+
+/*--------------------ASIDE END------------------------------*/
+
+/*--------------------CONTENT BEGIN------------------------------*/
+
+.content {
+	display: inline-block;
+	max-width: 70%;
+	vertical-align: top;
+	margin-left: 30px;
+}
+
+blockquote,
+blockquote p {
+	margin: 0;
+    /*min-height: 170px;*/
+    background-color: #29c5e6;
+}
+
+blockquote p {
+	padding: 10px;
+	box-sizing: border-box;
+	line-height: 28px;
+	font: 28px arial;
+    font-style: italic; 
+    font-stretch: condensed; 
+    color: #fff;
+    text-transform: uppercase;
+}
+
+blockquote span {
+	display: inline-block;
+	float: right;
+	font: 20px normal;
+	color: #1d8ea6;
+	text-transform: none;
+	margin: 15px 20px 0 0;
+}
+
+blockquote p:after {
+     content: "";
+     display: table;
+     clear: both;
+}
+
+.text {
+	margin: 20px 0;
+	font: 13px tahoma;
+}
+
+.img-box img {
+	display: inline-block;
+    width: 47%;
+    max-height: 180px; 
+    border: 1px solid #fff;
+    outline: 1px solid #c9c9c9;
+}
+
+.img-box img:last-child {
+	/*margin: 0;*/
+	float: right;
+}
+
+ /*------Our Team Begin------*/
+
+ .paragraph-title {
+ 	line-height: 45px;
+ 	margin-top: 30px; 
+ 	padding-left: 10px;
+ 	font-size: 26px;
+ }
+
+ .team-table div:nth-child(5n) {
+ 	margin-right: 0;
+ }
+
+ .team-member {
+ 	display: inline-block;
+ 	margin-top: 20px;
+ 	/*text-align: center;*/
+ 	margin-right: 6.1%;
+ 	font-size: 14px;
+ 	color: #8f8f8f;
+ 	font-stretch: condensed;
+ }
+
+.team-member span {
+	color: #29c5e6;
+	font-size: 13px;
+}
+ .team-member img {
+ 	width: 96px; height: 96px;
+ 	border: 1px solid #fff;
+    outline: 1px solid #c9c9c9;
+ }
+
