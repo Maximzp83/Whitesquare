@@ -20,7 +20,6 @@ a {	text-decoration: none; }
 
 .title {
 	background-color: #29c5e6;
-	/*font-weight: bold;*/
 	color: #fff;
 	font-stretch: condensed;
 	font-family: arial, sans-serif;
@@ -74,8 +73,6 @@ form[name="search"] {
 }
 
 .list-menu li.active a  {
-	/*max-width: 12.5%;
-	padding: 0 18.5%;*/
      background: #29c5e6;
      color: #fff;
  }
@@ -140,8 +137,7 @@ form[name="search"] {
 
 .aside {
 	display: inline-block;
-	width: 26%;
-	/*margin-right: 30px;*/
+	width: 26%; min-width: 213px;
 }
 
  /*------Aside Menu begin------*/
@@ -163,7 +159,6 @@ form[name="search"] {
 	line-height: 38px;
 	font-stretch: condensed;
 	color: #8f8f8f;
-	/*padding-left: 10px;*/
 }
 
  /*------Marker------*/
@@ -202,7 +197,6 @@ form[name="search"] {
 .map img {
 	display: block;
 	max-height: 180px; width: 91%;
-	/*margin: 5%;*/
 	padding: 4.5%;
 }
 
@@ -212,15 +206,14 @@ form[name="search"] {
 
 .content {
 	display: inline-block;
-	max-width: 70%;
+	max-width: 70%; min-width: 215px;
 	vertical-align: top;
-	margin-left: 30px;
+	margin-left: 3.2%;
 }
 
 blockquote,
 blockquote p {
 	margin: 0;
-    /*min-height: 170px;*/
     background-color: #29c5e6;
 }
 
@@ -251,21 +244,28 @@ blockquote p:after {
 }
 
 .text {
-	margin: 20px 0;
+	margin-top: 20px;
 	font: 13px tahoma;
+}
+
+.img-box:after {
+     content: "";
+     display: table;
+     clear: both;
 }
 
 .img-box img {
 	display: inline-block;
-    width: 47%;
-    max-height: 180px; 
+	float: left;
+    width: 48%; min-width: 213px;
+    height: auto; max-height: 180px;
+    margin-top: 20px;
     border: 1px solid #fff;
     outline: 1px solid #c9c9c9;
 }
 
-.img-box img:last-child {
-	/*margin: 0;*/
-	float: right;
+.img-box img:first-child {
+	margin-right: 22px;
 }
 
  /*------Our Team Begin------*/
@@ -277,25 +277,27 @@ blockquote p:after {
  	font-size: 26px;
  }
 
- .team-table div:nth-child(5n) {
- 	margin-right: 0;
+ .team-table {
+     text-align: left;
+     margin: 0; padding: 0;
+     margin-right: -40px;
  }
 
- .team-member {
+ .team-table li {
  	display: inline-block;
- 	margin-top: 20px;
- 	/*text-align: center;*/
- 	margin-right: 6.1%;
+ 	list-style: none;
+ 	margin: 20px 5.9% 0 0;
  	font-size: 14px;
  	color: #8f8f8f;
  	font-stretch: condensed;
  }
 
-.team-member span {
+.team-table  span {
 	color: #29c5e6;
 	font-size: 13px;
+	
 }
- .team-member img {
+ .team-table img {
  	width: 96px; height: 96px;
  	border: 1px solid #fff;
     outline: 1px solid #c9c9c9;
