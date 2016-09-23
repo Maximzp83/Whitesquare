@@ -58,14 +58,14 @@ form[name="search"] {
 }
 
 input[type="search"] {
-	width: 158px; height: 36px;
+	width: 158px; height: 33px;
 	background: #f3f3f3;
 	padding-left: 11px;
 	border: 1px solid #e7e7e7;
 }
 
 form[name="search"] button {
-	width: 36px; height: 36px;
+	width: 33px; height: 33px;
 	background-color: #29c5e6;
 	opacity: 0.75;
 	color: #fff;
