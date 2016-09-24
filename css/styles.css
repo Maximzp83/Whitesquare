@@ -232,7 +232,7 @@ form[name="search"] button:not(:hover) {
 
 .content {
 	display: inline-block;
-	max-width: 70.5%; min-width: 215px;
+	max-width: 70%; min-width: 215px;
 	vertical-align: top;
 	margin-left: 3.2%;
 }
