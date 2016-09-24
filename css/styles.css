@@ -18,7 +18,6 @@ button:hover {	cursor: pointer;  }
 
 .list-menu a,
 .sub-menu a,
-.sitemap a,	
 .sub-menu a:before {
     transition: .6s linear;
     -webkit-transition: .6s linear;/*Chrome до версии 26.0, Safari, Android и iOS*/
@@ -41,7 +40,6 @@ button:hover {	cursor: pointer;  }
 
 	/*----------------HEADER------(begin)-------------*/
 
-
 .header {
 	padding-top: 26px;	
 }
@@ -50,11 +48,9 @@ button:hover {	cursor: pointer;  }
      display: inline-block;
 }
 
-
 form[name="search"] {
 	display: inline-block;
 	float: right;
-	
 }
 
 input[type="search"] {
@@ -67,18 +63,22 @@ input[type="search"] {
 form[name="search"] button {
 	width: 33px; height: 33px;
 	background-color: #29c5e6;
-	opacity: 0.75;
 	color: #fff;
 	border: none;
 }
 
 form[name="search"] button:hover {
-	opacity: 1.0;
+	background-color: #63D8B7;
 }
 
- 
-/*--------Top menu in HEADER---(begin)--------*/
+form[name="search"] button:not(:hover) {
+	-webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    -o-transition: 1.5s;
+    transition: 1.5s;
+ }
 
+/*--------Top menu in HEADER---(begin)--------*/
 
 .top-menu ul {
 	display: block;
@@ -120,25 +120,30 @@ form[name="search"] button:hover {
 .list-menu span:after {
 	display: block;
     content: "";
-    width: 0%;
-    /*height: 0px;*/
-    /*background-color: #9ed0f2;*/
+    visibility: hidden;
     border-bottom: 2px solid #9ed0f2;
-    margin-top: 4px;
+    margin-top: 5px;
     -webkit-transition: margin .3s ease-out;
     -moz-transition: margin .3s ease-out;
+    -o-transition: margin .3s ease-out;
     transition: margin .3s ease-out;
 }
 
 .list-menu a:hover span:after {
 	margin-top: 9px;
-	width: 100%;
+    visibility: visible;
+}
+
+.list-menu a:not(:hover) span:after {
+	-webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s ease-in;
 }
 
 .list-menu li.active a:hover span:after  {
-     	width: 0%;
+	    visibility: hidden;
  }
-
 
     /*--------------------HEADER END------------------------------*/
 
@@ -312,9 +317,9 @@ blockquote p:after {
 .team-table span {
 	color: #29c5e6;
 	font-size: 13px;
-	
 }
- .team-table img {
+
+.team-table img {
  	width: 96px; height: 96px;
  	border: 1px solid #fff;
     outline: 1px solid #c9c9c9;
@@ -387,6 +392,13 @@ blockquote p:after {
 	color: #29c5e6;
 }
 
+.sitemap a:not(:hover) {
+	-webkit-transition: 1.3s;
+    -moz-transition: 1.3s;
+    -o-transition: 1.3s;
+    transition: 1.3s;
+}
+
  /*------Social Buttons begin------*/
 
 .social {
@@ -401,7 +413,7 @@ blockquote p:after {
 .social-icon {
 	width: 30px; height: 30px;
 	background: url("../images/social.png") no-repeat;
-	opacity: 0.75;
+	opacity: 0.65;
 	margin: 0 10px 10px 0; 
 }
 
@@ -409,6 +421,14 @@ blockquote p:after {
 .social-icon-small:hover {
 	opacity: 1.0;
 }
+
+.social-icon:not(:hover),
+.social-icon-small:not(:hover) {
+	-webkit-transition: 1.3s;
+    -moz-transition: 1.3s;
+    -o-transition: 1.3s;
+    transition: 1.3s;
+ }
 
 .twitter {
 	background-position: -5px -5px;
@@ -424,7 +444,7 @@ blockquote p:after {
 .social-icon-small {
 	width: 16px; height: 16px;
 	background: url("../images/social-small.png") no-repeat;
-	opacity: 0.75;
+	opacity: 0.65;
 	margin-right: 5px; 
 }
 
